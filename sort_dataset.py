@@ -1,5 +1,5 @@
 import time
-import quicksort
+import mergesort
 import two_pivot_block_quicksort
 
 
@@ -14,8 +14,8 @@ def timer(func):
     return wrapper
 
 @timer
-def sort_quicksort(arr):
-    return quicksort.sort(arr)
+def sort_mergesort(arr):
+    return mergesort.sort(arr)
 
 @timer
 def sort_two_pivot_block_quicksort(arr):
