@@ -7,6 +7,7 @@ def sort(arr):
     right = sort(arr[mid:])
 
     return merge(left, right)
+    
 
 def merge(left, right):
     merged = []

@@ -13,18 +13,22 @@ def timer(func):
         return result
     return wrapper
 
+
 @timer
 def sort_mergesort(arr):
     return mergesort.sort(arr)
+
 
 @timer
 def sort_two_pivot_block_quicksort(arr):
     return two_pivot_block_quicksort.sort(arr)
 
+
 def read_from_file_to_list(filename):
     with open(filename, 'r') as f:
         content = [int(line.strip()) for line in f.readlines()]
     return content
+
 
 def save_to_file(filename, dataset):
     with open(filename, 'w') as f:
@@ -32,7 +36,7 @@ def save_to_file(filename, dataset):
             f.write(f"{number}\n")
 
 
-filename = "2^16.txt"
+filename = "2^9.txt"
 arr = read_from_file_to_list(filename)
 arr = sort_two_pivot_block_quicksort(arr)
 # save_to_file("2^9_sorted.txt", arr)

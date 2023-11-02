@@ -4,6 +4,6 @@ mergesort:
 > 2^16 : 112.59 ms
 
 two_pivot_block_quicksort:
-> 2^9  : 0.35 ms
-> 2^13 : 8.04 ms
-> 2^16 : 48.90 ms
+> 2^9  : 0.36 ms
+> 2^13 : 6.74 ms
+> 2^16 : 51.51 ms

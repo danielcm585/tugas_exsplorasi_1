@@ -3,6 +3,7 @@ def read_from_file_to_list(filename):
         content = [int(line.strip()) for line in f.readlines()]
     return content
 
+
 def save_to_file(filename, dataset):
     with open(filename, 'w') as f:
         for number in dataset:
