@@ -10,7 +10,7 @@ def save_to_file(filename, dataset):
             f.write(f"{number}\n")
 
 
-filename = "2^16.txt"
+filename = "2^16_sorted.txt"
 arr = read_from_file_to_list(filename)
 arr.reverse()
 save_to_file("2^16_reversed.txt", arr)

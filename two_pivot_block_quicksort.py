@@ -1,4 +1,4 @@
-BLOCK_SIZE = 16
+BLOCK_SIZE = 1024
 
 
 def two_pivot_quicksort(arr, l, r):
@@ -7,6 +7,18 @@ def two_pivot_quicksort(arr, l, r):
         two_pivot_quicksort(arr,l,i-1)
         two_pivot_quicksort(arr,i+1,j-1)
         two_pivot_quicksort(arr,j+1,r)
+
+
+def two_pivot_quicksort_with_stack(arr):
+    st = [(0, len(arr)-1)]
+    while len(st) > 0:
+        l, r = st[-1]
+        st.pop(-1)
+        if (l < r):
+            i, j = block_lomuto_two_pivot(arr,l,r)
+            st.append((l,i-1))
+            st.append((i+1,j-1))
+            st.append((j+1,r))
 
 
 def block_lomuto_two_pivot(arr, l, r):
@@ -38,7 +50,8 @@ def block_lomuto_two_pivot(arr, l, r):
 
 
 def sort(arr):
-    two_pivot_quicksort(arr, 0, len(arr)-1)
+    # two_pivot_quicksort(arr, 0, len(arr)-1)
+    two_pivot_quicksort_with_stack(arr)
     return arr
 
 
