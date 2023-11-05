@@ -33,8 +33,8 @@ def sort_mergesort(arr):
     return mergesort.sort(arr)
 
 
-@profile_memory
-# @profile_runtime
+# @profile_memory
+@profile_runtime
 def sort_two_pivot_block_quicksort(arr):
     return two_pivot_block_quicksort.sort(arr)
 
@@ -52,7 +52,7 @@ def save_to_file(filename, dataset):
 
 
 def main():
-    filename = "2^16_sorted.txt"
+    filename = "2^16_reversed.txt"
     arr = read_from_file_to_list(filename)
     arr = sort_two_pivot_block_quicksort(arr)
     # save_to_file("2^9_sorted.txt", arr)
